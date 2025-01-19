@@ -24,16 +24,16 @@ int main() {
     // bigbox speed will normaly be smaler because it is moving in a negative diraction
     while(true){
 
-        if (bigbox.speed> smallbox.speed && smallbox.speed>0){
-            break; 
-        }
-        bool wall_collision=smallbox.positionX<=0;
-        if (wall_collision){
-            amount_of_collisions++; 
+       if (bigbox.speed> smallbox.speed && smallbox.speed>0){
+           break; 
+       }
+       bool wall_collision=smallbox.positionX<=0;
+       if (wall_collision){
+           amount_of_collisions++; 
 
-            smallbox.positionX=0;
-            smallbox.speed=-smallbox.speed; 
-        }
+           smallbox.positionX=0;
+           smallbox.speed=-smallbox.speed; 
+       }
 
 
         bool box_collision = smallbox.positionX>=bigbox.positionX;

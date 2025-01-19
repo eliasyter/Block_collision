@@ -20,7 +20,7 @@ int main(void)
     InitWindow(screenWidth, screenHeight, "collision of blocks");
 
 
-    SetTargetFPS(120);
+    SetTargetFPS(200);
 
 
     block smallbox; 
@@ -34,7 +34,7 @@ int main(void)
     bigbox.position.x=300;
     bigbox.position.y=screenHeight-60; 
     bigbox.position.z=10; 
-    bigbox.mass=10000; 
+    bigbox.mass=1000; 
     bigbox.speed=-1;
 
 
@@ -50,7 +50,7 @@ int main(void)
  
     while (!WindowShouldClose())    // Detect window close button or ESC key
     {
-            bool wall_collision=smallbox.position.x-25<=20;
+            bool wall_collision=smallbox.position.x+smallbox.speed-25<=20;
             if (wall_collision){
                 amount_of_collisions++; 
 
